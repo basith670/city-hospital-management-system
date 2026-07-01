@@ -229,7 +229,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$1200000$cLQ4dB66ApWzdkcbhl3fz4$lReoen0amwtCLByGd8hXg8hd7RcPqez5twAQfPLyI2c=",
-        "last_login": "2026-07-01T12:06:54.296Z",
+        "last_login": "2026-07-01T12:30:57.526Z",
         "is_superuser": false,
         "username": "basith_azeez",
         "first_name": "muhammad",
