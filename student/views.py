@@ -536,6 +536,9 @@ def view_reports(request):
         return redirect("patient_dashboard")
 
     reports = MedicalReport.objects.all()
+    for report in reports:
+        print("REPORT URL:", report.report_file.url)
+        print("REPORT PATH:", report.report_file.path)
 
     return render(
     request,
