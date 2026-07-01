@@ -17,6 +17,9 @@ from .forms import (
     PatientRegisterForm,
     MedicalReportForm
 )
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 # ==========================================
@@ -170,9 +173,14 @@ def booking(request):
 
             appointment = form.save()
 
-            send_mail(
-                "New Appointment",
-                f"""
+            # -----------------------------
+            # Email to Hospital Admin
+            # -----------------------------
+            try:
+
+                send_mail(
+                    subject="New Appointment",
+                    message=f"""
 Patient : {appointment.patient_name}
 
 Doctor : {appointment.doctor}
@@ -184,14 +192,22 @@ Time : {appointment.appointment_time}
 Reason :
 {appointment.reason}
 """,
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
-                fail_silently=False
-            )
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER],
+                    fail_silently=False,
+                )
 
-            send_mail(
-                "Appointment Confirmed",
-                f"""
+            except Exception:
+                logger.exception("Failed to send admin email")
+
+            # -----------------------------
+            # Email to Patient
+            # -----------------------------
+            try:
+
+                send_mail(
+                    subject="Appointment Confirmed",
+                    message=f"""
 Dear {appointment.patient_name},
 
 Your appointment has been booked successfully.
@@ -207,10 +223,13 @@ Time:
 
 Thank you for choosing City Hospital.
 """,
-                settings.EMAIL_HOST_USER,
-                [appointment.patient_email],
-                fail_silently=False
-            )
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[appointment.patient_email],
+                    fail_silently=False,
+                )
+
+            except Exception:
+                logger.exception("Failed to send patient email")
 
             return redirect(
                 "confirmation",
