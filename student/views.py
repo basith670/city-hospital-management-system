@@ -499,6 +499,18 @@ def upload_report(request):
             report.patient = request.user
             report.save()
 
+
+
+            print("=" * 50)
+
+            print("FILE NAME:", report.report_file.name)
+
+            print("FILE PATH:", report.report_file.path)
+
+            print("FILE EXISTS:", os.path.exists(report.report_file.path))
+
+            print("=" * 50)
+
             return redirect("patient_dashboard")
 
     return render(
