@@ -161,6 +161,7 @@ def contact(request):
 # ==========================================
 
 @login_required(login_url="login")
+
 def booking(request):
 
     doctor_id = request.GET.get("doctor")
@@ -174,26 +175,39 @@ def booking(request):
             appointment = form.save()
 
             # ==============================
-            # EMAIL DEBUG LOGS
-            # ==============================
 
-            import logging
-
-            logger = logging.getLogger(__name__)
-
-            logger.error(f"EMAIL_HOST = {settings.EMAIL_HOST}")
-            logger.error(f"EMAIL_PORT = {settings.EMAIL_PORT}")
-            logger.error(f"EMAIL_USER = {settings.EMAIL_HOST_USER}")
+            # EMAIL CONFIG DEBUG
 
             # ==============================
-            # ADMIN EMAIL
+
+            print("=" * 60)
+
+            print("EMAIL CONFIG")
+
+            print("HOST:", settings.EMAIL_HOST)
+
+            print("PORT:", settings.EMAIL_PORT)
+
+            print("USER:", settings.EMAIL_HOST_USER)
+
+            print("PASSWORD EXISTS:", bool(settings.EMAIL_HOST_PASSWORD))
+
+            print("=" * 60)
+
+            # ==============================
+
+            # EMAIL TO ADMIN
+
             # ==============================
 
             try:
 
                 send_mail(
+
                     subject="New Appointment",
+
                     message=f"""
+
 Patient : {appointment.patient_name}
 
 Doctor : {appointment.doctor}
@@ -203,57 +217,83 @@ Date : {appointment.appointment_date}
 Time : {appointment.appointment_time}
 
 Reason :
+
 {appointment.reason}
+
 """,
-                    from_email=settings.EMAIL_HOST_USER,
+
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+
                     recipient_list=[settings.EMAIL_HOST_USER],
+
                     fail_silently=False,
+
                 )
 
-                logger.error("Admin email sent successfully")
+                print("✅ Admin email sent successfully.")
 
             except Exception:
 
                 logger.exception("Failed to send admin email")
 
             # ==============================
-            # PATIENT EMAIL
+
+            # EMAIL TO PATIENT
+
             # ==============================
 
             try:
 
                 send_mail(
+
                     subject="Appointment Confirmed",
+
                     message=f"""
+
 Dear {appointment.patient_name},
 
 Your appointment has been booked successfully.
 
 Doctor:
+
 {appointment.doctor}
 
 Date:
+
 {appointment.appointment_date}
 
 Time:
+
 {appointment.appointment_time}
 
 Thank you for choosing City Hospital.
+
+Regards,
+
+City Hospital
+
 """,
-                    from_email=settings.EMAIL_HOST_USER,
+
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+
                     recipient_list=[appointment.patient_email],
+
                     fail_silently=False,
+
                 )
 
-                logger.error("Patient email sent successfully")
+                print("✅ Patient email sent successfully.")
 
             except Exception:
 
                 logger.exception("Failed to send patient email")
 
             return redirect(
+
                 "confirmation",
+
                 booking_id=appointment.id
+
             )
 
     else:
@@ -261,14 +301,21 @@ Thank you for choosing City Hospital.
         form = BookingForm()
 
         if doctor_id:
+
             form.fields["doctor"].initial = doctor_id
 
     return render(
+
         request,
+
         "booking.html",
+
         {
+
             "form": form
+
         }
+
     )
 
 
