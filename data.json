@@ -206,63 +206,6 @@
     }
 },
 {
-    "model": "student.customuser",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$pEwCqanNr2SSqF6xErmzTs$H/5xzeVGHuPEmtf8VVPu7QxijXDCzAKnC/J7+GvP7kk=",
-        "last_login": "2026-06-25T18:40:27.725Z",
-        "is_superuser": true,
-        "username": "basith",
-        "first_name": "",
-        "last_name": "",
-        "email": "basith@gmail.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2026-06-24T18:06:29.233Z",
-        "role": "",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "student.customuser",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$cLQ4dB66ApWzdkcbhl3fz4$lReoen0amwtCLByGd8hXg8hd7RcPqez5twAQfPLyI2c=",
-        "last_login": "2026-07-01T12:30:57.526Z",
-        "is_superuser": false,
-        "username": "basith_azeez",
-        "first_name": "muhammad",
-        "last_name": "basith",
-        "email": "basithkdrmf87@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-06-25T05:19:41.869Z",
-        "role": "patient",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "student.customuser",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$1200000$GgnpwqDEIOjNWJBwlYX4b7$A2T1Wnj2hHa2AB3hi7bwLK4B/OCdwyawbOkJZ3+omv4=",
-        "last_login": "2026-07-01T06:31:33.049Z",
-        "is_superuser": false,
-        "username": "dr_hisham_rasheed",
-        "first_name": "hisham",
-        "last_name": "rasheed",
-        "email": "basithkdrmf87@gmail.com",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2026-06-25T05:37:43.206Z",
-        "role": "doctor",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
     "model": "student.medicalreport",
     "pk": 1,
     "fields": {
