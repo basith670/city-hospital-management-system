@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Departments - City Hospital</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                Our Departments
+            </span>
+
+            <h1 class="section-title">
+                Specialized Healthcare Services
+            </h1>
+
+            <p class="section-subtitle">
+
+                Our expert medical departments provide comprehensive,
+                patient-centered care using advanced technology and
+                experienced healthcare professionals.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            {% for department in dept %}
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="department-card h-100">
+
+                    <img
+                        src="{{ department.dep_image.url }}"
+                        class="img-fluid"
+                        alt="{{ department.dep_name }}">
+
+                    <div class="department-content">
+
+                        <h4>
+
+                            {{ department.dep_name }}
+
+                        </h4>
+
+                        <p>
+
+                            {{ department.dep_description }}
+
+                        </p>
+
+                        <div class="d-grid gap-2 mt-4">
+
+                            <a href="{% url 'doctors' %}"
+                               class="btn btn-outline-primary">
+
+                                View Doctors
+
+                            </a>
+
+                            <a href="{% url 'booking' %}"
+                               class="btn btn-primary">
+
+                                Book Appointment
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="text-center">
+
+                <h3 class="text-danger">
+
+                    No Departments Available
+
+                </h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

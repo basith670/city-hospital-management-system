@@ -1,0 +1,80 @@
+{% extends 'auth_base.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row justify-content-center mt-5">
+
+        <div class="col-md-5">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-body p-5">
+
+                    <h2 class="text-center text-success mb-4">
+                        City Hospital Login
+                    </h2>
+
+                    {% if error %}
+                    <div class="alert alert-danger">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+
+                    <form method="POST">
+
+                        {% csrf_token %}
+
+                        <input
+                            type="text"
+                            name="username"
+                            class="form-control mb-3"
+                            placeholder="Username">
+
+                        <input
+                            type="password"
+                            name="password"
+                            class="form-control mb-4"
+                            placeholder="Password">
+
+                        <button
+                            class="btn btn-success w-100">
+
+                            Login
+
+                        </button>
+
+                    </form>
+
+                    <hr>
+
+                    <div class="text-center">
+
+                        <a href="{% url 'doctor_register' %}">
+                            Register as Doctor
+                        </a>
+
+                        <br><br>
+
+                        <a href="{% url 'patient_register' %}">
+                            Register as Patient
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

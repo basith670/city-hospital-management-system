@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Doctors - City Hospital</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-5">
+
+            <span class="text-primary fw-bold text-uppercase">
+                Our Medical Team
+            </span>
+
+            <h1 class="display-5 fw-bold mt-2">
+                Meet Our Expert Doctors
+            </h1>
+
+            <p class="text-muted">
+
+                Our experienced specialists are committed to providing
+                world-class healthcare with compassion and excellence.
+
+            </p>
+
+        </div>
+
+        <!-- Doctor Cards -->
+
+        <div class="row g-4">
+
+            {% for doctor in doctors %}
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden doctor-card">
+
+                    <img
+                        src="{{ doctor.doc_image.url }}"
+                        class="card-img-top"
+                        style="height:300px;object-fit:cover;"
+                        alt="{{ doctor.doc_name }}">
+
+                    <div class="card-body text-center">
+
+                        <h4 class="fw-bold">
+                            {{ doctor.doc_name }}
+                        </h4>
+
+                        <h6 class="text-primary fw-semibold">
+                            {{ doctor.doc_spec }}
+                        </h6>
+
+                        <p class="text-muted mb-2">
+                            <i class="fa-solid fa-hospital me-2"></i>
+                            {{ doctor.dep_name }}
+                        </p>
+
+                        <p class="mb-2">
+
+                            <i class="fa-solid fa-graduation-cap text-success"></i>
+
+                            {{ doctor.qualification }}
+
+                        </p>
+
+                        <p class="mb-2">
+
+                            <i class="fa-solid fa-briefcase text-warning"></i>
+
+                            {{ doctor.experience }} Years Experience
+
+                        </p>
+
+                        {% if doctor.available %}
+
+                        <span class="badge bg-success mb-3">
+                            Available Today
+                        </span>
+
+                        {% else %}
+
+                        <span class="badge bg-danger mb-3">
+                            Not Available
+                        </span>
+
+                        {% endif %}
+
+                        <div class="d-grid">
+
+                            <a href="{% url 'booking' %}?doctor={{ doctor.id }}"
+                               class="btn btn-primary rounded-pill">
+
+                                <i class="fa-solid fa-calendar-check me-2"></i>
+
+                                Book Appointment
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="text-center">
+
+                <h3 class="text-danger">
+                    No Doctors Available
+                </h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

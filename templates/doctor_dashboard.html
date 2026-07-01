@@ -1,0 +1,263 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}
+Doctor Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="welcome-card">
+
+    <h2>
+        Welcome Dr. {{ user.first_name|default:user.username }} 👋
+    </h2>
+
+    <p>
+        Manage appointments, patients and reports from one place.
+    </p>
+
+</div>
+
+<!-- Statistics -->
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+        <h3>{{ appointment_count }}</h3>
+
+        <p>Appointments</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-users"></i>
+
+        <h3>{{ patient_count }}</h3>
+
+        <p>Patients</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-file-medical"></i>
+
+        <h3>{{ report_count }}</h3>
+
+        <p>Reports</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-hospital"></i>
+
+        <h3>{{ department_count }}</h3>
+
+        <p>Departments</p>
+
+    </div>
+
+</div>
+
+<!-- Recent Appointments -->
+
+<div class="dashboard-card">
+
+    <h3 class="mb-4">
+
+        Recent Appointments
+
+    </h3>
+
+    <table class="table table-hover">
+
+        <thead>
+
+            <tr>
+
+                <th>Patient</th>
+
+                <th>Doctor</th>
+
+                <th>Date</th>
+
+                <th>Time</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for appointment in appointments|slice:":5" %}
+
+            <tr>
+
+                <td>{{ appointment.patient_name }}</td>
+
+                <td>{{ appointment.doctor.doc_name }}</td>
+
+                <td>{{ appointment.appointment_date }}</td>
+
+                <td>{{ appointment.appointment_time }}</td>
+
+                <td>
+
+                    {% if appointment.status == "Pending" %}
+
+                        <span class="badge bg-warning text-dark">
+                            Pending
+                        </span>
+
+                    {% elif appointment.status == "Confirmed" %}
+
+                        <span class="badge bg-success">
+                            Confirmed
+                        </span>
+
+                    {% elif appointment.status == "Completed" %}
+
+                        <span class="badge bg-primary">
+                            Completed
+                        </span>
+
+                    {% else %}
+
+                        <span class="badge bg-danger">
+                            Cancelled
+                        </span>
+
+                    {% endif %}
+
+                </td>
+
+            </tr>
+
+        {% empty %}
+
+            <tr>
+
+                <td colspan="5">
+
+                    No Appointments Found
+
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- Recent Reports -->
+
+<div class="dashboard-card">
+
+    <h3 class="mb-4">
+
+        Recent Medical Reports
+
+    </h3>
+
+    <table class="table table-hover">
+
+        <thead>
+
+            <tr>
+
+                <th>Patient</th>
+
+                <th>Report</th>
+
+                <th>Uploaded</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for report in reports %}
+
+            <tr>
+
+                <td>{{ report.patient.username }}</td>
+
+                <td>{{ report.report_name }}</td>
+
+                <td>{{ report.uploaded_at|date:"d M Y" }}</td>
+
+            </tr>
+
+        {% empty %}
+
+            <tr>
+
+                <td colspan="3">
+
+                    No Reports Uploaded
+
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- Quick Actions -->
+
+<div class="dashboard-card">
+
+    <h3 class="mb-4">
+
+        Quick Actions
+
+    </h3>
+
+    <div class="action-buttons">
+
+        <a href="{% url 'view_reports' %}" class="btn btn-primary">
+
+            <i class="fa-solid fa-file-medical me-2"></i>
+
+            View Reports
+
+        </a>
+
+        <a href="{% url 'home' %}" class="btn btn-success">
+
+            <i class="fa-solid fa-globe me-2"></i>
+
+            Visit Website
+
+        </a>
+
+        <a href="{% url 'logout' %}" class="btn btn-danger">
+
+            <i class="fa-solid fa-right-from-bracket me-2"></i>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

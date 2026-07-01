@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block title %}
+<title>City Hospital</title>
+{% endblock %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="{% static 'css/hospital.css' %}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top hospital-navbar">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="{% url 'home' %}">
+
+<i class="fa-solid fa-hospital me-2"></i>
+
+City Hospital
+
+</a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbar">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbar">
+
+    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Public Links -->
+    
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'doctors' %}">Doctors</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'departments' %}">Departments</a>
+        </li>
+    
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+    
+        {% if user.is_authenticated %}
+    
+            <!-- Booking -->
+    
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'booking' %}">
+                    Book Appointment
+                </a>
+            </li>
+    
+            <!-- Dashboard -->
+    
+            {% if user.role == "doctor" %}
+    
+            <li class="nav-item">
+                <a class="btn btn-light rounded-pill ms-lg-2"
+                   href="{% url 'doctor_dashboard' %}">
+                    Dashboard
+                </a>
+            </li>
+    
+            {% else %}
+    
+            <li class="nav-item">
+                <a class="btn btn-light rounded-pill ms-lg-2"
+                   href="{% url 'patient_dashboard' %}">
+                    Dashboard
+                </a>
+            </li>
+    
+            {% endif %}
+    
+            <!-- User Dropdown -->
+    
+            <li class="nav-item dropdown ms-lg-3">
+    
+                <a class="nav-link dropdown-toggle"
+                   href="#"
+                   data-bs-toggle="dropdown">
+    
+                    <i class="fa-solid fa-circle-user me-2"></i>
+    
+                    {{ user.username }}
+    
+                </a>
+    
+                <ul class="dropdown-menu dropdown-menu-end">
+    
+                    {% if user.role == "patient" %}
+    
+                    <li>
+                        <a class="dropdown-item"
+                           href="{% url 'upload_report' %}">
+                            Upload Report
+                        </a>
+                    </li>
+    
+                    {% endif %}
+    
+                    {% if user.role == "doctor" %}
+    
+                    <li>
+                        <a class="dropdown-item"
+                           href="{% url 'view_reports' %}">
+                            Patient Reports
+                        </a>
+                    </li>
+    
+                    {% endif %}
+    
+                    <li><hr class="dropdown-divider"></li>
+    
+                    <li>
+                        <a class="dropdown-item text-danger"
+                           href="{% url 'logout' %}">
+                            Logout
+                        </a>
+                    </li>
+    
+                </ul>
+    
+            </li>
+    
+        {% else %}
+    
+            <li class="nav-item ms-lg-2">
+                <a href="{% url 'login' %}"
+                   class="btn btn-primary rounded-pill">
+                    Login
+                </a>
+            </li>
+    
+            <li class="nav-item ms-lg-2">
+                <a href="{% url 'patient_register' %}"
+                   class="btn btn-outline-primary rounded-pill">
+                    Register
+                </a>
+            </li>
+    
+        {% endif %}
+    
+    </ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-section">
+
+<div class="container">
+
+<div class="row gy-4">
+
+<div class="col-lg-4">
+
+<h4>
+
+<i class="fa-solid fa-hospital me-2"></i>
+
+City Hospital
+
+</h4>
+
+<p>
+
+Providing advanced healthcare with experienced doctors and modern facilities.
+
+</p>
+
+</div>
+
+<div class="col-lg-2">
+
+    <h5>Quick Links</h5>
+
+    <div class="d-grid gap-2 mt-3">
+
+        <a href="{% url 'home' %}" class="footer-btn">
+            Home
+        </a>
+
+        <a href="{% url 'about' %}" class="footer-btn">
+            About
+        </a>
+
+        <a href="{% url 'doctors' %}" class="footer-btn">
+            Doctors
+        </a>
+
+        <a href="{% url 'booking' %}" class="footer-btn">
+            Booking
+        </a>
+
+    </div>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5>
+
+Emergency
+
+</h5>
+
+<p>
+
+24 × 7 Ambulance
+
+</p>
+
+<h4>
+
+☎ +91 9876543210
+
+</h4>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5>
+
+Follow Us
+
+</h5>
+
+<div class="social-icons">
+
+<i class="fab fa-facebook-f"></i>
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-linkedin"></i>
+
+<i class="fab fa-youtube"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center">
+
+© 2026 City Hospital | All Rights Reserved
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

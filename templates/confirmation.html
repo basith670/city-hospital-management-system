@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Appointment Confirmed | City Hospital</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="confirmation-section py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="confirmation-card text-center">
+
+                    <div class="success-icon mb-4">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </div>
+
+                    <h2 class="mb-3">
+                        Appointment Booked Successfully
+                    </h2>
+
+                    <p class="text-muted mb-5">
+
+                        Thank you for choosing City Hospital.
+                        Your appointment request has been received.
+
+                    </p>
+
+                    <div class="appointment-details">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-4">
+
+                                <h6>Patient Name</h6>
+
+                                <p>{{ booking.patient_name }}</p>
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <h6>Doctor</h6>
+
+                                <p>{{ booking.doctor.doc_name }}</p>
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <h6>Department</h6>
+
+                                <p>{{ booking.doctor.dep_name }}</p>
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <h6>Status</h6>
+
+                                <span class="badge bg-warning text-dark">
+
+                                    {{ booking.status }}
+
+                                </span>
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <h6>Appointment Date</h6>
+
+                                <p>{{ booking.appointment_date }}</p>
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <h6>Appointment Time</h6>
+
+                                <p>{{ booking.appointment_time }}</p>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <h6>Reason for Visit</h6>
+
+                                <p>
+
+                                    {{ booking.reason|default:"Not Provided" }}
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5">
+
+                        <a href="{% url 'home' %}"
+                           class="btn btn-primary me-3">
+
+                            <i class="fa-solid fa-house me-2"></i>
+
+                            Home
+
+                        </a>
+
+                        {% if user.role == "patient" %}
+
+                        <a href="{% url 'patient_dashboard' %}"
+                           class="btn btn-outline-primary">
+
+                            <i class="fa-solid fa-table-columns me-2"></i>
+
+                            Dashboard
+
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Book Appointment - City Hospital</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="booking-section py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="booking-card">
+
+                    <div class="text-center mb-5">
+
+                        <span class="section-tag">
+                            Appointment
+                        </span>
+
+                        <h2 class="section-title">
+                            Book an Appointment
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Fill in your details and our team will confirm your appointment shortly.
+                        </p>
+
+                    </div>
+
+                    <form method="POST">
+
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Full Name
+                                </label>
+
+                                {{ form.patient_name }}
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Email Address
+                                </label>
+
+                                {{ form.patient_email }}
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Phone Number
+                                </label>
+
+                                {{ form.patient_phone }}
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Select Doctor
+                                </label>
+
+                                {{ form.doctor }}
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Appointment Date
+                                </label>
+
+                                {{ form.appointment_date }}
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label class="form-label">
+                                    Appointment Time
+                                </label>
+
+                                {{ form.appointment_time }}
+
+                            </div>
+
+                            <div class="col-12 mb-4">
+
+                                <label class="form-label">
+                                    Reason for Visit
+                                </label>
+
+                                {{ form.reason }}
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary w-100 booking-btn">
+
+                                    <i class="fa-solid fa-calendar-check me-2"></i>
+
+                                    Book Appointment
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

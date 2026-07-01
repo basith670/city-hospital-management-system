@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Contact Us | City Hospital</title>
+{% endblock %}
+
+{% block content %}
+
+<section class="contact-section py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<span class="section-tag">
+Contact Us
+</span>
+
+<h2 class="section-title">
+We're Here To Help
+</h2>
+
+<p class="section-subtitle">
+Have questions or need medical assistance?
+Our team is available 24×7.
+</p>
+
+</div>
+
+<div class="row g-5">
+
+<!-- Contact Details -->
+
+<div class="col-lg-5">
+
+<div class="contact-card">
+
+<div class="contact-item">
+
+<i class="fa-solid fa-phone"></i>
+
+<div>
+
+<h5>Phone</h5>
+
+<p>+91 9876543210</p>
+
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-envelope"></i>
+
+<div>
+
+<h5>Email</h5>
+
+<p>info@cityhospital.com</p>
+
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<h5>Address</h5>
+
+<p>
+City Hospital<br>
+Calicut, Kerala, India
+</p>
+
+</div>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-clock"></i>
+
+<div>
+
+<h5>Working Hours</h5>
+
+<p>
+
+Monday - Saturday<br>
+
+8:00 AM - 8:00 PM
+
+</p>
+
+</div>
+
+</div>
+
+<div class="contact-item contact-emergency-box">
+
+<i class="fa-solid fa-truck-medical"></i>
+
+<div>
+
+<h5>Emergency</h5>
+
+<p>
+
+24 × 7 Ambulance Service
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Contact Form -->
+
+<div class="col-lg-7">
+
+<div class="contact-form-card">
+
+<form>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label">
+
+Full Name
+
+</label>
+
+<input
+type="text"
+class="form-control"
+placeholder="Enter your name">
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label">
+
+Email Address
+
+</label>
+
+<input
+type="email"
+class="form-control"
+placeholder="Enter your email">
+
+</div>
+
+<div class="col-12 mb-4">
+
+<label class="form-label">
+
+Subject
+
+</label>
+
+<input
+type="text"
+class="form-control"
+placeholder="Subject">
+
+</div>
+
+<div class="col-12 mb-4">
+
+<label class="form-label">
+
+Message
+
+</label>
+
+<textarea
+class="form-control"
+rows="6"
+placeholder="Write your message"></textarea>
+
+</div>
+
+<div class="col-12">
+
+<button
+class="btn btn-primary contact-btn w-100">
+
+<i class="fa-solid fa-paper-plane me-2"></i>
+
+Send Message
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Google Map -->
+
+<div class="row mt-5">
+
+<div class="col-12">
+
+<div class="map-card">
+
+<iframe
+src="https://www.google.com/maps?q=Calicut,Kerala&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen
+loading="lazy">
+
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

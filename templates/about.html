@@ -1,0 +1,614 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% comment %} hero {% endcomment %}
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+                    About Us
+                </span>
+
+                <h1 class="display-4 fw-bold mt-3">
+                    Caring for Life,
+                    <span>Every Day.</span>
+                </h1>
+
+                <p class="lead mt-4">
+                    City Hospital has been providing world-class healthcare,
+                    advanced technology, and compassionate treatment for
+                    thousands of patients for more than 25 years.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="{% url 'booking' %}" class="btn btn-primary btn-lg me-3">
+                        Book Appointment
+                    </a>
+
+                    <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-lg">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img
+                    src="{% static 'images/about.jpeg' %}"
+                    class="img-fluid about-image"
+                    alt="Hospital">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% comment %} STATISTICS {% endcomment %}
+<section class="about-stats py-5">
+
+    <div class="container">
+    
+    <div class="row text-center g-4">
+    
+    <div class="col-md-3">
+    
+    <div class="stat-card">
+    
+    <h2>25+</h2>
+    
+    <p>Years Experience</p>
+    
+    </div>
+    
+    </div>
+    
+    <div class="col-md-3">
+    
+    <div class="stat-card">
+    
+    <h2>100+</h2>
+    
+    <p>Expert Doctors</p>
+    
+    </div>
+    
+    </div>
+    
+    <div class="col-md-3">
+    
+    <div class="stat-card">
+    
+    <h2>50K+</h2>
+    
+    <p>Patients Treated</p>
+    
+    </div>
+    
+    </div>
+    
+    <div class="col-md-3">
+    
+    <div class="stat-card">
+    
+    <h2>24×7</h2>
+    
+    <p>Emergency Care</p>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+<!-- ================= WHO WE ARE ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img
+                    src="{% static 'images/about1.png' %}"
+                    class="img-fluid rounded-4 shadow"
+                    alt="Hospital">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+                    Who We Are
+                </span>
+
+                <h2 class="section-title">
+                    Excellence in Healthcare Since 2000
+                </h2>
+
+                <p class="mt-4">
+
+                    City Hospital is dedicated to delivering compassionate,
+                    patient-centered healthcare with state-of-the-art medical
+                    technology. Our experienced doctors, skilled nurses, and
+                    caring staff work together to provide safe, reliable, and
+                    affordable treatment.
+
+                </p>
+
+                <p>
+
+                    We believe every patient deserves personalized care,
+                    modern facilities, and the highest medical standards.
+                    Our mission is to improve lives through innovation,
+                    excellence, and compassion.
+
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-6">
+
+                        <h5>✔ Modern Equipment</h5>
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <h5>✔ Certified Doctors</h5>
+
+                    </div>
+
+                    <div class="col-6 mt-3">
+
+                        <h5>✔ Patient Safety</h5>
+
+                    </div>
+
+                    <div class="col-6 mt-3">
+
+                        <h5>✔ 24×7 Emergency</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= MISSION & VISION ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                Our Purpose
+            </span>
+
+            <h2 class="section-title">
+                Mission & Vision
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="card h-100 border-0 shadow-lg rounded-4">
+
+                    <div class="card-body p-5 text-center">
+
+                        <i class="fa-solid fa-bullseye fa-3x text-primary mb-4"></i>
+
+                        <h3>Our Mission</h3>
+
+                        <p class="mt-3">
+
+                            To provide accessible, affordable, and
+                            world-class healthcare through advanced
+                            technology, compassionate professionals,
+                            and continuous innovation.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="card h-100 border-0 shadow-lg rounded-4">
+
+                    <div class="card-body p-5 text-center">
+
+                        <i class="fa-solid fa-eye fa-3x text-primary mb-4"></i>
+
+                        <h3>Our Vision</h3>
+
+                        <p class="mt-3">
+
+                            To become the most trusted healthcare
+                            institution by setting new standards in
+                            patient care, medical excellence,
+                            and community wellbeing.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                Why Choose Us
+            </span>
+
+            <h2 class="section-title">
+                Trusted By Thousands Of Families
+            </h2>
+
+            <p class="section-subtitle">
+
+                We combine advanced technology, expert medical professionals,
+                and compassionate care to deliver exceptional healthcare.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    <h4>Experienced Doctors</h4>
+
+                    <p>
+
+                        Highly qualified specialists with years of medical experience.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    <h4>Patient-Centered Care</h4>
+
+                    <p>
+
+                        Personalized treatment plans focused on every patient's needs.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-microscope"></i>
+
+                    <h4>Advanced Technology</h4>
+
+                    <p>
+
+                        Modern diagnostic equipment and world-class medical facilities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-truck-medical"></i>
+
+                    <h4>24×7 Emergency</h4>
+
+                    <p>
+
+                        Emergency specialists available around the clock.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <h4>Safe & Secure</h4>
+
+                    <p>
+
+                        International healthcare standards with complete patient safety.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    <h4>Trusted Excellence</h4>
+
+                    <p>
+
+                        Serving thousands of satisfied patients with outstanding care.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OUR JOURNEY ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                Our Journey
+            </span>
+
+            <h2 class="section-title">
+                Milestones Through The Years
+            </h2>
+
+        </div>
+
+        <div class="row text-center g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow rounded-4 p-4 h-100">
+
+                    <h2 class="text-primary">2000</h2>
+
+                    <h5>Hospital Founded</h5>
+
+                    <p>
+                        Started with a vision to provide quality healthcare.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow rounded-4 p-4 h-100">
+
+                    <h2 class="text-primary">2010</h2>
+
+                    <h5>Expansion</h5>
+
+                    <p>
+                        Added new departments and advanced operation theatres.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow rounded-4 p-4 h-100">
+
+                    <h2 class="text-primary">2018</h2>
+
+                    <h5>Digital Healthcare</h5>
+
+                    <p>
+                        Introduced electronic medical records and online booking.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card border-0 shadow rounded-4 p-4 h-100">
+
+                    <h2 class="text-primary">2025</h2>
+
+                    <h5>Modern Hospital</h5>
+
+                    <p>
+                        Recognized as one of the region's leading healthcare centers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                Leadership
+            </span>
+
+            <h2 class="section-title">
+                Meet Our Leadership Team
+            </h2>
+
+        </div>
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="doctor-card">
+
+                    <img src="{% static 'images/director.jpg' %}" class="img-fluid">
+
+                    <div class="doctor-content">
+
+                        <h4>Dr. Michael Thomas</h4>
+
+                        <p>Medical Director</p>
+
+                        <span class="doctor-exp">
+
+                            25+ Years Experience
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="doctor-card">
+
+                    <img src="{% static 'images/chiefdoctor.jpg' %}" class="img-fluid">
+
+                    <div class="doctor-content">
+
+                        <h4>Dr. Sarah Wilson</h4>
+
+                        <p>Chief Medical Officer</p>
+
+                        <span class="doctor-exp">
+
+                            20+ Years Experience
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2>
+
+                Your Health Is Our Commitment
+
+            </h2>
+
+            <p>
+
+                Experience compassionate care, advanced treatments,
+                and trusted medical professionals all under one roof.
+
+            </p>
+
+            <a href="{% url 'booking' %}" class="btn btn-lg">
+
+                Book Appointment
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

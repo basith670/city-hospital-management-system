@@ -1,0 +1,928 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>City Hospital | Home</title>
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO CAROUSEL -->
+
+<div id="carouselExampleIndicators"
+     class="carousel slide shadow-lg rounded-4 overflow-hidden"
+     data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+
+        <button type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"></button>
+
+        <button type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"></button>
+
+        <button type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"></button>
+
+    </div>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <img src="{% static 'images/car11.jpeg' %}"
+                 class="d-block w-100 carousel-img">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img src="{% static 'images/car12.jpeg' %}"
+                 class="d-block w-100 carousel-img">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img src="{% static 'images/car13.jpeg' %}"
+                 class="d-block w-100 carousel-img">
+
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+    </button>
+
+</div>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-section">
+
+  <div class="container">
+
+      <div class="row align-items-center">
+
+          <!-- LEFT -->
+
+          <div class="col-lg-6">
+
+              <span class="hero-badge">
+
+                  <i class="fa-solid fa-heart-pulse"></i>
+
+                  Trusted Healthcare Since 2001
+
+              </span>
+
+              <h1 class="hero-title">
+
+                  Your Health,
+
+                  <span>Our Priority</span>
+
+              </h1>
+
+              <p class="hero-text">
+
+                  Experience world-class healthcare with highly qualified doctors,
+                  advanced medical technology, and compassionate patient care.
+                  We are committed to helping you live a healthier and happier life.
+
+              </p>
+
+              <div class="hero-buttons">
+
+                  <a href="{% url 'booking' %}" class="btn btn-primary">
+
+                      Book Appointment
+
+                  </a>
+
+                  <a href="{% url 'departments' %}" class="btn btn-outline-primary">
+
+                      Explore Services
+
+                  </a>
+
+              </div>
+
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="col-lg-6">
+
+              <div class="hero-image">
+
+                  <img
+                      src="{% static 'images/hero.jpeg' %}"
+                      class="img-fluid"
+                      alt="Hospital">
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section">
+
+  <div class="container">
+
+      <div class="text-center mb-5">
+
+          <span class="section-tag">
+              Why Choose Us
+          </span>
+
+          <h2 class="section-title">
+              Exceptional Healthcare Experience
+          </h2>
+
+          <p class="section-subtitle">
+              We combine experienced specialists, advanced medical technology,
+              and compassionate care to provide the best treatment for every patient.
+          </p>
+
+      </div>
+
+      <div class="row g-4">
+
+          <!-- Card 1 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="feature-card">
+
+                  <i class="fa-solid fa-user-doctor"></i>
+
+                  <h4>Expert Doctors</h4>
+
+                  <p>
+                      Highly qualified specialists with years of experience in
+                      patient-centered healthcare.
+                  </p>
+
+              </div>
+
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="feature-card">
+
+                  <i class="fa-solid fa-hospital"></i>
+
+                  <h4>Modern Facilities</h4>
+
+                  <p>
+                      State-of-the-art medical equipment ensuring accurate
+                      diagnosis and treatment.
+                  </p>
+
+              </div>
+
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="feature-card">
+
+                  <i class="fa-solid fa-calendar-check"></i>
+
+                  <h4>Easy Booking</h4>
+
+                  <p>
+                      Schedule appointments online quickly and conveniently
+                      with just a few clicks.
+                  </p>
+
+              </div>
+
+          </div>
+
+          <!-- Card 4 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="feature-card">
+
+                  <i class="fa-solid fa-truck-medical"></i>
+
+                  <h4>24×7 Emergency</h4>
+
+                  <p>
+                      Dedicated emergency services with rapid response,
+                      ambulance support, and expert care.
+                  </p>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- ================= DEPARTMENTS ================= -->
+
+<section class="departments-home">
+
+  <div class="container">
+
+      <div class="text-center mb-5">
+
+          <span class="section-tag">
+              Medical Departments
+          </span>
+
+          <h2 class="section-title">
+              World-Class Medical Services
+          </h2>
+
+          <p class="section-subtitle">
+              Our multidisciplinary departments provide comprehensive healthcare
+              using advanced technology and internationally recognized treatment protocols.
+          </p>
+
+      </div>
+
+      <div class="row g-4">
+
+          <!-- Cardiology -->
+
+          <div class="col-lg-4 col-md-6">
+
+              <div class="department-card">
+
+                  <img src="{% static 'images/cardiology.jpeg' %}" class="img-fluid" alt="Cardiology">
+
+                  <div class="department-content">
+
+                      <i class="fa-solid fa-heart-pulse"></i>
+
+                      <h4>Cardiology</h4>
+
+                      <p>
+                          Complete cardiac care including diagnosis,
+                          surgery, rehabilitation, and preventive treatment.
+                      </p>
+
+                      <a href="{% url 'departments' %}" class="btn btn-primary mt-4">
+                          Learn More
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Neurology -->
+
+          <div class="col-lg-4 col-md-6">
+
+              <div class="department-card">
+
+                  <img src="{% static 'images/neurology.jpeg' %}" class="img-fluid" alt="Neurology">
+
+                  <div class="department-content">
+
+                      <i class="fa-solid fa-brain"></i>
+
+                      <h4>Neurology</h4>
+
+                      <p>
+                          Expert treatment for disorders affecting
+                          the brain, spinal cord, and nervous system.
+                      </p>
+
+                      <a href="{% url 'departments' %}" class="btn btn-primary mt-4">
+                          Learn More
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Orthopedics -->
+
+          <div class="col-lg-4 col-md-6">
+
+              <div class="department-card">
+
+                  <img src="{% static 'images/orthopedics.jpeg' %}" class="img-fluid" alt="Orthopedics">
+
+                  <div class="department-content">
+
+                      <i class="fa-solid fa-bone"></i>
+
+                      <h4>Orthopedics</h4>
+
+                      <p>
+                          Advanced bone, joint, sports injury,
+                          and spine care with modern surgical techniques.
+                      </p>
+
+                      <a href="{% url 'departments' %}" class="btn btn-primary mt-4">
+                          Learn More
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DOCTORS ================= -->
+
+<section class="doctors-home">
+
+  <div class="container">
+
+      <div class="text-center mb-5">
+
+          <span class="section-tag">
+              Our Specialists
+          </span>
+
+          <h2 class="section-title">
+              Meet Our Expert Doctors
+          </h2>
+
+          <p class="section-subtitle">
+              Our experienced medical professionals are committed to providing
+              compassionate, evidence-based healthcare using the latest medical
+              technology.
+          </p>
+
+      </div>
+
+      <div class="row g-4">
+
+          <!-- Doctor 1 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="doctor-card">
+
+                  <img src="{% static 'images/doctor1.jpeg' %}"
+                       class="img-fluid"
+                       alt="Doctor">
+
+                  <div class="doctor-content">
+
+                      <h4>Dr. John Mathew</h4>
+
+                      <p>Senior Cardiologist</p>
+
+                      <span class="doctor-exp">
+                          <i class="fa-solid fa-award me-2"></i>
+                          12+ Years Experience
+                      </span>
+
+                      <a href="{% url 'booking' %}"
+                         class="btn btn-primary">
+
+                          Book Appointment
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Doctor 2 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="doctor-card">
+
+                  <img src="{% static 'images/doctor2.jpeg' %}"
+                       class="img-fluid"
+                       alt="Doctor">
+
+                  <div class="doctor-content">
+
+                      <h4>Dr. Anjali Nair</h4>
+
+                      <p>Senior Neurologist</p>
+
+                      <span class="doctor-exp">
+                          <i class="fa-solid fa-award me-2"></i>
+                          10+ Years Experience
+                      </span>
+
+                      <a href="{% url 'booking' %}"
+                         class="btn btn-primary">
+
+                          Book Appointment
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Doctor 3 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="doctor-card">
+
+                  <img src="{% static 'images/doctor3.jpeg' %}"
+                       class="img-fluid"
+                       alt="Doctor">
+
+                  <div class="doctor-content">
+
+                      <h4>Dr. Rahul Menon</h4>
+
+                      <p>Orthopedic Surgeon</p>
+
+                      <span class="doctor-exp">
+                          <i class="fa-solid fa-award me-2"></i>
+                          15+ Years Experience
+                      </span>
+
+                      <a href="{% url 'booking' %}"
+                         class="btn btn-primary">
+
+                          Book Appointment
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Doctor 4 -->
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="doctor-card">
+
+                  <img src="{% static 'images/doctor4.jpeg' %}"
+                       class="img-fluid"
+                       alt="Doctor">
+
+                  <div class="doctor-content">
+
+                      <h4>Dr. Meera Joseph</h4>
+
+                      <p>Senior Pediatrician</p>
+
+                      <span class="doctor-exp">
+                          <i class="fa-solid fa-award me-2"></i>
+                          9+ Years Experience
+                      </span>
+
+                      <a href="{% url 'booking' %}"
+                         class="btn btn-primary">
+
+                          Book Appointment
+
+                      </a>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="about-preview">
+
+  <div class="container">
+
+      <div class="row align-items-center g-5">
+
+          <!-- Left Image -->
+
+          <div class="col-lg-6">
+
+              <img src="{% static 'images/doctors-team.jpeg' %}"
+                   class="img-fluid rounded-4 shadow-lg"
+                   alt="Hospital Team">
+
+          </div>
+
+          <!-- Right Content -->
+
+          <div class="col-lg-6">
+
+              <span class="section-tag">
+                  Why Choose Us
+              </span>
+
+              <h2 class="section-title">
+                  Trusted Healthcare For Every Family
+              </h2>
+
+              <p class="section-subtitle text-start">
+
+                  City Hospital combines experienced doctors, advanced
+                  technology, modern infrastructure and compassionate care
+                  to provide exceptional treatment for every patient.
+
+              </p>
+
+              <ul class="about-list mt-4">
+
+                  <li>
+                      <i class="fa-solid fa-circle-check"></i>
+                      100+ Experienced Doctors
+                  </li>
+
+                  <li>
+                      <i class="fa-solid fa-circle-check"></i>
+                      NABH Accredited Hospital
+                  </li>
+
+                  <li>
+                      <i class="fa-solid fa-circle-check"></i>
+                      Advanced ICU & Operation Theatres
+                  </li>
+
+                  <li>
+                      <i class="fa-solid fa-circle-check"></i>
+                      Cashless Insurance Facility
+                  </li>
+
+                  <li>
+                      <i class="fa-solid fa-circle-check"></i>
+                      24 × 7 Emergency Care
+                  </li>
+
+                  <li>
+                      <i class="fa-solid fa-circle-check"></i>
+                      More Than 50,000 Happy Patients
+                  </li>
+
+              </ul>
+
+              <a href="{% url 'about' %}"
+                 class="btn btn-primary mt-4">
+
+                  Learn More
+
+              </a>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="stats-section">
+
+  <div class="container">
+
+      <div class="row g-4">
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="stat-card">
+
+                  <div class="stat-number">
+                      100+
+                  </div>
+
+                  <div class="stat-title">
+                      Expert Doctors
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="stat-card">
+
+                  <div class="stat-number">
+                      50K+
+                  </div>
+
+                  <div class="stat-title">
+                      Happy Patients
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="stat-card">
+
+                  <div class="stat-number">
+                      25+
+                  </div>
+
+                  <div class="stat-title">
+                      Years Experience
+                  </div>
+
+              </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+
+              <div class="stat-card">
+
+                  <div class="stat-number">
+                      24×7
+                  </div>
+
+                  <div class="stat-title">
+                      Emergency Care
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+  <div class="container">
+
+      <div class="text-center mb-5">
+
+          <span class="section-tag">
+              Testimonials
+          </span>
+
+          <h2 class="section-title">
+              What Our Patients Say
+          </h2>
+
+          <p class="section-subtitle">
+              Thousands of patients trust City Hospital for compassionate care,
+              expert doctors, and outstanding treatment outcomes.
+          </p>
+
+      </div>
+
+      <div class="row g-4">
+
+          <!-- Review 1 -->
+
+          <div class="col-lg-4">
+
+              <div class="testimonial-card">
+
+                  <img src="{% static 'images/patient1.jpg' %}" alt="Patient">
+
+                  <h5>Arun Kumar</h5>
+
+                  <span>Cardiology Patient</span>
+
+                  <p>
+                      The doctors were extremely professional and caring.
+                      From admission to discharge everything was smooth.
+                      Highly recommended.
+                  </p>
+
+                  <div class="rating">
+
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Review 2 -->
+
+          <div class="col-lg-4">
+
+              <div class="testimonial-card">
+
+                  <img src="{% static 'images/patient2.jpg' %}" alt="Patient">
+
+                  <h5>Priya Nair</h5>
+
+                  <span>Neurology Patient</span>
+
+                  <p>
+                      Amazing facilities, friendly staff, and highly experienced
+                      specialists. I received the best treatment possible.
+                  </p>
+
+                  <div class="rating">
+
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Review 3 -->
+
+          <div class="col-lg-4">
+
+              <div class="testimonial-card">
+
+                  <img src="{% static 'images/patient3.jpg' %}" alt="Patient">
+
+                  <h5>Rahul Menon</h5>
+
+                  <span>Orthopedic Patient</span>
+
+                  <p>
+                      Excellent medical care with modern technology.
+                      The doctors explained everything clearly and treated me
+                      with compassion.
+                  </p>
+
+                  <div class="rating">
+
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- ================= EMERGENCY ================= -->
+
+<section class="emergency-section">
+
+    <div class="container">
+
+        <div class="emergency-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <h2>
+
+                        24×7 Emergency Medical Care
+
+                    </h2>
+
+                    <p>
+
+                        Our emergency department is staffed by experienced physicians,
+                        trauma specialists and advanced life support teams ready to
+                        provide immediate medical care at any time.
+
+                    </p>
+
+                    <div class="emergency-phone">
+
+                        <i class="fa-solid fa-phone-volume me-2"></i>
+
+                        +91 98765 43210
+
+                    </div>
+
+                    <a href="{% url 'booking' %}" class="btn btn-light btn-lg mt-4">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="{% static 'images/emergency.jpeg' %}"
+                         class="img-fluid emergency-image"
+                         alt="Emergency Doctor">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+  <div class="container">
+
+      <div class="cta-box">
+
+          <h2>
+              Your Health Deserves The Best Care
+          </h2>
+
+          <p>
+
+              Schedule your consultation today and experience compassionate,
+              world-class healthcare from our experienced specialists.
+
+          </p>
+
+          <a href="{% url 'booking' %}" class="btn btn-lg">
+
+              Book Your Appointment
+
+          </a>
+
+      </div>
+
+  </div>
+
+</section>
+
+{% endblock %}
