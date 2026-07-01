@@ -173,9 +173,22 @@ def booking(request):
 
             appointment = form.save()
 
-            # -----------------------------
-            # Email to Hospital Admin
-            # -----------------------------
+            # ==============================
+            # EMAIL DEBUG LOGS
+            # ==============================
+
+            import logging
+
+            logger = logging.getLogger(__name__)
+
+            logger.error(f"EMAIL_HOST = {settings.EMAIL_HOST}")
+            logger.error(f"EMAIL_PORT = {settings.EMAIL_PORT}")
+            logger.error(f"EMAIL_USER = {settings.EMAIL_HOST_USER}")
+
+            # ==============================
+            # ADMIN EMAIL
+            # ==============================
+
             try:
 
                 send_mail(
@@ -197,12 +210,16 @@ Reason :
                     fail_silently=False,
                 )
 
+                logger.error("Admin email sent successfully")
+
             except Exception:
+
                 logger.exception("Failed to send admin email")
 
-            # -----------------------------
-            # Email to Patient
-            # -----------------------------
+            # ==============================
+            # PATIENT EMAIL
+            # ==============================
+
             try:
 
                 send_mail(
@@ -228,7 +245,10 @@ Thank you for choosing City Hospital.
                     fail_silently=False,
                 )
 
+                logger.error("Patient email sent successfully")
+
             except Exception:
+
                 logger.exception("Failed to send patient email")
 
             return redirect(
