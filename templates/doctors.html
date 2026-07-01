@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 <title>Doctors - City Hospital</title>
@@ -42,7 +43,7 @@
                 <div class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden doctor-card">
 
                     <img
-                        src="{{ doctor.doc_image.url }}"
+                        src="{% static doctor.doc_image %}"
                         class="card-img-top"
                         style="height:300px;object-fit:cover;"
                         alt="{{ doctor.doc_name }}">

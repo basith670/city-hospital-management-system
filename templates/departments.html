@@ -40,9 +40,9 @@
                 <div class="department-card h-100">
 
                     <img
-                        src="{{ department.dep_image.url }}"
-                        class="img-fluid"
-                        alt="{{ department.dep_name }}">
+                            src="{% static department.dep_image %}"
+                            class="img-fluid"
+                            alt="{{ department.dep_name }}">
 
                     <div class="department-content">
 

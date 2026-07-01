@@ -10,8 +10,9 @@ class Department(models.Model):
     dep_name = models.CharField(max_length=100)
     dep_description = models.TextField()
 
-    dep_image = models.ImageField(
-        upload_to="departments/"
+    dep_image = models.CharField(
+    max_length=100
+    
     )
 
     def __str__(self):
@@ -31,8 +32,9 @@ class Doctors(models.Model):
         on_delete=models.CASCADE
     )
 
-    doc_image = models.ImageField(
-        upload_to="doctors/"
+    doc_image = models.CharField(
+    max_length=100
+
     )
 
     experience = models.PositiveIntegerField(default=1)
