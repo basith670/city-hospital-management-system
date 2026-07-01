@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.conf import settings
 
+import os
 from .models import (
     Department,
     Doctors,
