@@ -1,990 +1,275 @@
 [
 {
-  "model": "sessions.session",
-  "pk": "4nrqs916toyp96gh26bbc547qvet3ams",
-  "fields": {
-    "session_data": ".eJxVjMsOwiAQRf-FtSF0oOC4dN9vIDM8pGogKe3K-O_apAvd3nPOfQlP21r81tPi5yguAsTpd2MKj1R3EO9Ub02GVtdlZrkr8qBdTi2m5_Vw_w4K9fKtkUeTrFMJgqFklUWdmXXW4CAOjmhgTdGEDJhzBAKl0BCOBq0-c0bx_gDr1zgC:1weoUZ:xszoa26k8FSzpI6E1MHEnmnZ6TIhB0ylC5sStaA2UKM",
-    "expire_date": "2026-07-15T06:32:15.875Z"
-  }
+    "model": "student.department",
+    "pk": 1,
+    "fields": {
+        "dep_name": "Cardiology",
+        "dep_description": "Diagnoses and treats heart-related diseases and conditions. Helps patients maintain a healthy heart and blood circulation.",
+        "dep_image": "images/departments/1.jpeg"
+    }
 },
 {
-  "model": "sessions.session",
-  "pk": "dz4qyat46oyjuhzhvwygivtkx2rc9y1d",
-  "fields": {
-    "session_data": ".eJxVjMsOwiAUBf-FtSGA4eXSvd9A7gOkaiAp7arx37VJF7o9M3M2kWBdalpHntPE4iKMOP1uCPTMbQf8gHbvknpb5gnlrsiDDnnrnF_Xw_07qDDqt9bgiBk8WmeUZV0QNDsTjTNAFLxFTT4Hn3Uhi6RKDGwpIuqM6mxYvD8C1jjh:1weqDZ:bEN7-sODhOH5o3yd0leNm51l-nz-sjfma8j9EHuoUcE",
-    "expire_date": "2026-07-15T08:22:49.251Z"
-  }
+    "model": "student.department",
+    "pk": 2,
+    "fields": {
+        "dep_name": "Neurology",
+        "dep_description": "Specializes in disorders of the brain, nerves, and spinal cord. Provides treatment for conditions like stroke, epilepsy, and migraines.",
+        "dep_image": "images/departments/2.jpeg"
+    }
 },
 {
-  "model": "sessions.session",
-  "pk": "fanizouhh59255mmqvarqv277he9q1ck",
-  "fields": {
-    "session_data": ".eJxVjMsOwiAQRf-FtSF0oOC4dN9vIDM8pGogKe3K-O_apAvd3nPOfQlP21r81tPi5yguAsTpd2MKj1R3EO9Ub02GVtdlZrkr8qBdTi2m5_Vw_w4K9fKtkUeTrFMJgqFklUWdmXXW4CAOjmhgTdGEDJhzBAKl0BCOBq0-c0bx_gDr1zgC:1wcz0G:jG8WKWyJNL7QPx492T0mnW6AIw676a1KpMKwGEcA960",
-    "expire_date": "2026-07-10T05:21:24.584Z"
-  }
+    "model": "student.department",
+    "pk": 3,
+    "fields": {
+        "dep_name": "Orthopedics",
+        "dep_description": "Focuses on bones, joints, muscles, and fractures. Helps improve movement and treat injuries of the skeletal system.",
+        "dep_image": "images/departments/3.jpeg"
+    }
 },
 {
-  "model": "sessions.session",
-  "pk": "u5o0nnhliuuy5afegok7f1qlq7sgu25y",
-  "fields": {
-    "session_data": ".eJxVjDsOwjAQRO_iGlmK499S0nMGa9e7wQFkS_lUEXcnkVKAppv3ZjaVcF1KWmeZ0sjqqjp1-e0I80vqAfiJ9dF0bnWZRtKHok8663tjed9O9--g4Fz2dRgoBs7iSaKJxAOafrB9wD3gmLwL1gFYiMAOxDCIN46i7TKiDUZ9vvySOAQ:1wcRzs:UKubet3VffzyGs3vTwAZP-RQzk_OWY9zO5r7OLyfbp0",
-    "expire_date": "2026-07-08T18:06:48.158Z"
-  }
+    "model": "student.department",
+    "pk": 4,
+    "fields": {
+        "dep_name": "Pediatrics",
+        "dep_description": "Provides medical care for infants, children, and teenagers. Ensures healthy growth and development of children.",
+        "dep_image": "images/departments/4.jpeg"
+    }
 },
 {
-  "model": "student.department",
-  "pk": 1,
-  "fields": {
-    "dep_name": "Cardiology",
-    "dep_description": "Diagnoses and treats heart-related diseases and conditions. Helps patients maintain a healthy heart and blood circulation.",
-    "dep_image": "departments/1.jpeg"
-  }
+    "model": "student.department",
+    "pk": 5,
+    "fields": {
+        "dep_name": "Dermatology",
+        "dep_description": "Treats skin, hair, and nail-related conditions. Helps manage acne, allergies, infections, and other skin problems.",
+        "dep_image": "images/departments/5.jpeg"
+    }
 },
 {
-  "model": "student.department",
-  "pk": 2,
-  "fields": {
-    "dep_name": "Neurology",
-    "dep_description": "Specializes in disorders of the brain, nerves, and spinal cord. Provides treatment for conditions like stroke, epilepsy, and migraines.",
-    "dep_image": "departments/2.jpeg"
-  }
+    "model": "student.department",
+    "pk": 7,
+    "fields": {
+        "dep_name": "ENT",
+        "dep_description": "ENT stands for Ear, Nose, and Throat. In the medical field, it is officially known as Otolaryngology. An ENT specialist is a physician and surgeon who diagnoses and treats conditions affecting these interconnected sensory organs, as well as related structures in the head and neck",
+        "dep_image": "images/departments/7.jpeg"
+    }
 },
 {
-  "model": "student.department",
-  "pk": 3,
-  "fields": {
-    "dep_name": "Orthopedics",
-    "dep_description": "Focuses on bones, joints, muscles, and fractures. Helps improve movement and treat injuries of the skeletal system.",
-    "dep_image": "departments/3.jpeg"
-  }
+    "model": "student.department",
+    "pk": 8,
+    "fields": {
+        "dep_name": "General Surgeon",
+        "dep_description": "General surgeons are specialized medical doctors who diagnose and manage a broad spectrum of diseases, with a primary focus on abdominal and soft-tissue conditions. They oversee the entire surgical process, from initial consultations and pre-operative evaluations to the operation and post-operative recovery.",
+        "dep_image": "images/departments/8.jpeg"
+    }
 },
 {
-  "model": "student.department",
-  "pk": 4,
-  "fields": {
-    "dep_name": "Pediatrics",
-    "dep_description": "Provides medical care for infants, children, and teenagers. Ensures healthy growth and development of children.",
-    "dep_image": "departments/4.jpeg"
-  }
+    "model": "student.department",
+    "pk": 9,
+    "fields": {
+        "dep_name": "Gynecology",
+        "dep_description": "Gynecology is the branch of medicine focused on the female reproductive system. It deals with the health, diagnosis, and treatment of disorders related to the uterus, vagina, ovaries, and fallopian tubes, as well as general women's health issues like menopause and menstruation",
+        "dep_image": "images/departments/9.jpeg"
+    }
 },
 {
-  "model": "student.department",
-  "pk": 5,
-  "fields": {
-    "dep_name": "Dermatology",
-    "dep_description": "Treats skin, hair, and nail-related conditions. Helps manage acne, allergies, infections, and other skin problems.",
-    "dep_image": "departments/5.jpeg"
-  }
+    "model": "student.doctors",
+    "pk": 1,
+    "fields": {
+        "doc_name": "Dr. John Carter",
+        "doc_spec": "Cardiologist",
+        "dep_name": 1,
+        "doc_image": "images/doctors/doc1.jpg",
+        "experience": 18,
+        "qualification": "MBBS, MD (Cardiology)",
+        "available": true
+    }
 },
 {
-  "model": "student.department",
-  "pk": 7,
-  "fields": {
-    "dep_name": "ENT",
-    "dep_description": "ENT stands for Ear, Nose, and Throat. In the medical field, it is officially known as Otolaryngology. An ENT specialist is a physician and surgeon who diagnoses and treats conditions affecting these interconnected sensory organs, as well as related structures in the head and neck",
-    "dep_image": "departments/6.jpeg"
-  }
+    "model": "student.doctors",
+    "pk": 2,
+    "fields": {
+        "doc_name": "Dr. Emily Wilson",
+        "doc_spec": "Neurologist",
+        "dep_name": 2,
+        "doc_image": "images/doctors/doc2.jpg",
+        "experience": 15,
+        "qualification": "MBBS, DM (Neurology)",
+        "available": true
+    }
 },
 {
-  "model": "student.department",
-  "pk": 8,
-  "fields": {
-    "dep_name": "General Surgeon",
-    "dep_description": "General surgeons are specialized medical doctors who diagnose and manage a broad spectrum of diseases, with a primary focus on abdominal and soft-tissue conditions. They oversee the entire surgical process, from initial consultations and pre-operative evaluations to the operation and post-operative recovery.",
-    "dep_image": "departments/7.jpeg"
-  }
+    "model": "student.doctors",
+    "pk": 3,
+    "fields": {
+        "doc_name": "Dr. David Smith",
+        "doc_spec": "Orthopedic Surgeon",
+        "dep_name": 3,
+        "doc_image": "images/doctors/doc3.jpg",
+        "experience": 20,
+        "qualification": "MBBS, MS (Orthopedics)",
+        "available": true
+    }
 },
 {
-  "model": "student.department",
-  "pk": 9,
-  "fields": {
-    "dep_name": "Gynecology",
-    "dep_description": "Gynecology is the branch of medicine focused on the female reproductive system. It deals with the health, diagnosis, and treatment of disorders related to the uterus, vagina, ovaries, and fallopian tubes, as well as general women's health issues like menopause and menstruation",
-    "dep_image": "departments/8.jpeg"
-  }
+    "model": "student.doctors",
+    "pk": 4,
+    "fields": {
+        "doc_name": "Dr. Sophia Brown",
+        "doc_spec": "Pediatrician",
+        "dep_name": 4,
+        "doc_image": "images/doctors/doc4.jpg",
+        "experience": 12,
+        "qualification": "MBBS, MD (Pediatrics)",
+        "available": true
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 1,
-  "fields": {
-    "doc_name": "Dr. John Carter",
-    "doc_spec": "Cardiologist",
-    "dep_name": 1,
-    "doc_image": "doctors/doc1.jpg",
-    "experience": 18,
-    "qualification": "MBBS, MD (Cardiology)",
-    "available": true
-  }
+    "model": "student.doctors",
+    "pk": 5,
+    "fields": {
+        "doc_name": "Dr. James Miller",
+        "doc_spec": "Dermatologist",
+        "dep_name": 5,
+        "doc_image": "images/doctors/doc5.jpg",
+        "experience": 14,
+        "qualification": "MBBS, MD (Dermatology)",
+        "available": true
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 2,
-  "fields": {
-    "doc_name": "Dr. Emily Wilson",
-    "doc_spec": "Neurologist",
-    "dep_name": 2,
-    "doc_image": "doctors/doc2.jpg",
-    "experience": 15,
-    "qualification": "MBBS, DM (Neurology)",
-    "available": true
-  }
+    "model": "student.doctors",
+    "pk": 6,
+    "fields": {
+        "doc_name": "Dr. Olivia Taylor",
+        "doc_spec": "ENT Specialist",
+        "dep_name": 7,
+        "doc_image": "images/doctors/doc6.jpg",
+        "experience": 16,
+        "qualification": "MBBS, MS (ENT)",
+        "available": true
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 3,
-  "fields": {
-    "doc_name": "Dr. David Smith",
-    "doc_spec": "Orthopedic Surgeon",
-    "dep_name": 3,
-    "doc_image": "doctors/doc3.jpg",
-    "experience": 20,
-    "qualification": "MBBS, MS (Orthopedics)",
-    "available": true
-  }
+    "model": "student.doctors",
+    "pk": 7,
+    "fields": {
+        "doc_name": "Dr. Daniel Anderson",
+        "doc_spec": "General Surgeon",
+        "dep_name": 8,
+        "doc_image": "images/doctors/doc7.jpg",
+        "experience": 22,
+        "qualification": "MBBS, MS (General Surgery)",
+        "available": true
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 4,
-  "fields": {
-    "doc_name": "Dr. Sophia Brown",
-    "doc_spec": "Pediatrician",
-    "dep_name": 4,
-    "doc_image": "doctors/doc4.jpg",
-    "experience": 12,
-    "qualification": "MBBS, MD (Pediatrics)",
-    "available": true
-  }
+    "model": "student.doctors",
+    "pk": 8,
+    "fields": {
+        "doc_name": "Dr. Grace Thomas",
+        "doc_spec": "Gynecologist",
+        "dep_name": 9,
+        "doc_image": "images/doctors/doc8.jpg",
+        "experience": 17,
+        "qualification": "MBBS, MS, DGO",
+        "available": true
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 5,
-  "fields": {
-    "doc_name": "Dr. James Miller",
-    "doc_spec": "Dermatologist",
-    "dep_name": 5,
-    "doc_image": "doctors/doc5.jpg",
-    "experience": 14,
-    "qualification": "MBBS, MD (Dermatology)",
-    "available": true
-  }
+    "model": "student.booking",
+    "pk": 1,
+    "fields": {
+        "patient_name": "M. Basith",
+        "patient_email": "basithkdrmf87@gmail.com",
+        "patient_phone": "32456543",
+        "doctor": 3,
+        "appointment_date": "2026-11-10",
+        "appointment_time": "11:22:00",
+        "reason": "kjndjkjbdcbjcfkd",
+        "status": "Cancelled",
+        "created_at": "2026-06-25T15:53:12.921Z"
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 6,
-  "fields": {
-    "doc_name": "Dr. Olivia Taylor",
-    "doc_spec": "ENT Specialist",
-    "dep_name": 7,
-    "doc_image": "doctors/doc6.jpg",
-    "experience": 16,
-    "qualification": "MBBS, MS (ENT)",
-    "available": true
-  }
+    "model": "student.booking",
+    "pk": 2,
+    "fields": {
+        "patient_name": "M. Basith",
+        "patient_email": "basithkdrmf87@gmail.com",
+        "patient_phone": "90444678",
+        "doctor": 5,
+        "appointment_date": "2026-11-12",
+        "appointment_time": "14:00:00",
+        "reason": "",
+        "status": "Completed",
+        "created_at": "2026-06-25T18:31:47.904Z"
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 7,
-  "fields": {
-    "doc_name": "Dr. Daniel Anderson",
-    "doc_spec": "General Surgeon",
-    "dep_name": 8,
-    "doc_image": "doctors/doc7.jpg",
-    "experience": 22,
-    "qualification": "MBBS, MS (General Surgery)",
-    "available": true
-  }
+    "model": "student.customuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$pEwCqanNr2SSqF6xErmzTs$H/5xzeVGHuPEmtf8VVPu7QxijXDCzAKnC/J7+GvP7kk=",
+        "last_login": "2026-06-25T18:40:27.725Z",
+        "is_superuser": true,
+        "username": "basith",
+        "first_name": "",
+        "last_name": "",
+        "email": "basith@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-24T18:06:29.233Z",
+        "role": "",
+        "groups": [],
+        "user_permissions": []
+    }
 },
 {
-  "model": "student.doctors",
-  "pk": 8,
-  "fields": {
-    "doc_name": "Dr. Grace Thomas",
-    "doc_spec": "Gynecologist",
-    "dep_name": 9,
-    "doc_image": "doctors/doc8.jpg",
-    "experience": 17,
-    "qualification": "MBBS, MS, DGO",
-    "available": true
-  }
+    "model": "student.customuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$cLQ4dB66ApWzdkcbhl3fz4$lReoen0amwtCLByGd8hXg8hd7RcPqez5twAQfPLyI2c=",
+        "last_login": "2026-07-01T12:06:54.296Z",
+        "is_superuser": false,
+        "username": "basith_azeez",
+        "first_name": "muhammad",
+        "last_name": "basith",
+        "email": "basithkdrmf87@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-25T05:19:41.869Z",
+        "role": "patient",
+        "groups": [],
+        "user_permissions": []
+    }
 },
 {
-  "model": "student.booking",
-  "pk": 1,
-  "fields": {
-    "patient_name": "M. Basith",
-    "patient_email": "basithkdrmf87@gmail.com",
-    "patient_phone": "32456543",
-    "doctor": 3,
-    "appointment_date": "2026-11-10",
-    "appointment_time": "11:22:00",
-    "reason": "kjndjkjbdcbjcfkd",
-    "status": "Cancelled",
-    "created_at": "2026-06-25T15:53:12.921Z"
-  }
+    "model": "student.customuser",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$GgnpwqDEIOjNWJBwlYX4b7$A2T1Wnj2hHa2AB3hi7bwLK4B/OCdwyawbOkJZ3+omv4=",
+        "last_login": "2026-07-01T06:31:33.049Z",
+        "is_superuser": false,
+        "username": "dr_hisham_rasheed",
+        "first_name": "hisham",
+        "last_name": "rasheed",
+        "email": "basithkdrmf87@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-06-25T05:37:43.206Z",
+        "role": "doctor",
+        "groups": [],
+        "user_permissions": []
+    }
 },
 {
-  "model": "student.booking",
-  "pk": 2,
-  "fields": {
-    "patient_name": "M. Basith",
-    "patient_email": "basithkdrmf87@gmail.com",
-    "patient_phone": "90444678",
-    "doctor": 5,
-    "appointment_date": "2026-11-12",
-    "appointment_time": "14:00:00",
-    "reason": "",
-    "status": "Completed",
-    "created_at": "2026-06-25T18:31:47.904Z"
-  }
-},
-{
-  "model": "student.customuser",
-  "fields": {
-    "password": "pbkdf2_sha256$1200000$pEwCqanNr2SSqF6xErmzTs$H/5xzeVGHuPEmtf8VVPu7QxijXDCzAKnC/J7+GvP7kk=",
-    "last_login": "2026-06-25T18:40:27.725Z",
-    "is_superuser": true,
-    "username": "basith",
-    "first_name": "",
-    "last_name": "",
-    "email": "basith@gmail.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2026-06-24T18:06:29.233Z",
-    "role": "",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "student.customuser",
-  "fields": {
-    "password": "pbkdf2_sha256$1200000$cLQ4dB66ApWzdkcbhl3fz4$lReoen0amwtCLByGd8hXg8hd7RcPqez5twAQfPLyI2c=",
-    "last_login": "2026-07-01T08:22:49.250Z",
-    "is_superuser": false,
-    "username": "basith_azeez",
-    "first_name": "muhammad",
-    "last_name": "basith",
-    "email": "basithkdrmf87@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2026-06-25T05:19:41.869Z",
-    "role": "patient",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "student.customuser",
-  "fields": {
-    "password": "pbkdf2_sha256$1200000$GgnpwqDEIOjNWJBwlYX4b7$A2T1Wnj2hHa2AB3hi7bwLK4B/OCdwyawbOkJZ3+omv4=",
-    "last_login": "2026-07-01T06:31:33.049Z",
-    "is_superuser": false,
-    "username": "dr_hisham_rasheed",
-    "first_name": "hisham",
-    "last_name": "rasheed",
-    "email": "basithkdrmf87@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2026-06-25T05:37:43.206Z",
-    "role": "doctor",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "student.medicalreport",
-  "pk": 1,
-  "fields": {
-    "patient": [
-      "basith_azeez"
-    ],
-    "report_name": "blood",
-    "report_file": "reports/Muhammad_Basith_software_developer.pdf",
-    "uploaded_at": "2026-06-25T07:16:34.234Z"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 1,
-  "fields": {
-    "action_time": "2026-06-24T18:09:12.067Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "1",
-    "object_repr": "Cardiology",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 2,
-  "fields": {
-    "action_time": "2026-06-24T18:09:34.700Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "2",
-    "object_repr": "Neurology",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 3,
-  "fields": {
-    "action_time": "2026-06-24T18:09:54.539Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "3",
-    "object_repr": "Orthopedics",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 4,
-  "fields": {
-    "action_time": "2026-06-24T18:10:22.663Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "4",
-    "object_repr": "Pediatrics",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 5,
-  "fields": {
-    "action_time": "2026-06-24T18:10:44.596Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "5",
-    "object_repr": "Dermatology",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 6,
-  "fields": {
-    "action_time": "2026-06-24T18:10:59.085Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "6",
-    "object_repr": "New Department –",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 7,
-  "fields": {
-    "action_time": "2026-06-24T18:12:50.681Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "1",
-    "object_repr": "Dr. John Mathew",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 8,
-  "fields": {
-    "action_time": "2026-06-24T18:13:29.918Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "2",
-    "object_repr": "Dr. Anjali Nair",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 9,
-  "fields": {
-    "action_time": "2026-06-24T18:14:07.316Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "3",
-    "object_repr": "Dr. Arjun Kumar",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 10,
-  "fields": {
-    "action_time": "2026-06-24T18:14:44.650Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "4",
-    "object_repr": "Dr. Meera Joseph",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 11,
-  "fields": {
-    "action_time": "2026-06-24T18:15:15.933Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "5",
-    "object_repr": "Dr. Rahul Menon",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 12,
-  "fields": {
-    "action_time": "2026-06-24T18:15:43.640Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "6",
-    "object_repr": "Dr. Sneha Paul",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 13,
-  "fields": {
-    "action_time": "2026-06-25T14:18:25.428Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "6",
-    "object_repr": "Dr. Sneha Paul",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 14,
-  "fields": {
-    "action_time": "2026-06-25T14:18:28.613Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "5",
-    "object_repr": "Dr. Rahul Menon",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 15,
-  "fields": {
-    "action_time": "2026-06-25T14:18:32.563Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "4",
-    "object_repr": "Dr. Meera Joseph",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 16,
-  "fields": {
-    "action_time": "2026-06-25T14:18:35.932Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "3",
-    "object_repr": "Dr. Arjun Kumar",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 17,
-  "fields": {
-    "action_time": "2026-06-25T14:18:38.829Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "2",
-    "object_repr": "Dr. Anjali Nair",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 18,
-  "fields": {
-    "action_time": "2026-06-25T14:18:42.231Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "1",
-    "object_repr": "Dr. John Mathew",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 19,
-  "fields": {
-    "action_time": "2026-06-25T14:32:57.821Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "1",
-    "object_repr": "Dr. John Carter",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 20,
-  "fields": {
-    "action_time": "2026-06-25T14:33:39.710Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "2",
-    "object_repr": "Dr. Emily Wilson",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 21,
-  "fields": {
-    "action_time": "2026-06-25T14:34:15.605Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "3",
-    "object_repr": "Dr. David Smith",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 22,
-  "fields": {
-    "action_time": "2026-06-25T14:34:54.689Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "4",
-    "object_repr": "Dr. Sophia Brown",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 23,
-  "fields": {
-    "action_time": "2026-06-25T14:35:26.183Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "5",
-    "object_repr": "Dr. James Miller",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 24,
-  "fields": {
-    "action_time": "2026-06-25T14:37:04.732Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "7",
-    "object_repr": "ENT",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 25,
-  "fields": {
-    "action_time": "2026-06-25T14:37:48.351Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "6",
-    "object_repr": "Dr. Olivia Taylor",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 26,
-  "fields": {
-    "action_time": "2026-06-25T14:38:51.615Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "8",
-    "object_repr": "General Surgeon",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 27,
-  "fields": {
-    "action_time": "2026-06-25T14:39:29.355Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "7",
-    "object_repr": "Dr. Daniel Anderson",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 28,
-  "fields": {
-    "action_time": "2026-06-25T14:40:41.413Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "9",
-    "object_repr": "Gynecology",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 29,
-  "fields": {
-    "action_time": "2026-06-25T14:41:18.734Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "doctors"
-    ],
-    "object_id": "8",
-    "object_repr": "Dr. Grace Thomas",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 30,
-  "fields": {
-    "action_time": "2026-06-25T15:33:15.796Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "1",
-    "object_repr": "Cardiology",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 31,
-  "fields": {
-    "action_time": "2026-06-25T15:33:28.216Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "2",
-    "object_repr": "Neurology",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 32,
-  "fields": {
-    "action_time": "2026-06-25T15:33:38.530Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "3",
-    "object_repr": "Orthopedics",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 33,
-  "fields": {
-    "action_time": "2026-06-25T15:33:50.016Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "4",
-    "object_repr": "Pediatrics",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 34,
-  "fields": {
-    "action_time": "2026-06-25T15:34:31.446Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "5",
-    "object_repr": "Dermatology",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 35,
-  "fields": {
-    "action_time": "2026-06-25T15:34:43.047Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "7",
-    "object_repr": "ENT",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 36,
-  "fields": {
-    "action_time": "2026-06-25T15:35:02.994Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "6",
-    "object_repr": "New Department –",
-    "action_flag": 3,
-    "change_message": ""
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 37,
-  "fields": {
-    "action_time": "2026-06-25T15:35:14.332Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "8",
-    "object_repr": "General Surgeon",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 38,
-  "fields": {
-    "action_time": "2026-06-25T15:35:23.914Z",
-    "user": [
-      "basith"
-    ],
-    "content_type": [
-      "student",
-      "department"
-    ],
-    "object_id": "9",
-    "object_repr": "Gynecology",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Dep image\"]}}]"
-  }
+    "model": "student.medicalreport",
+    "pk": 1,
+    "fields": {
+        "patient": 2,
+        "report_name": "blood",
+        "report_file": "reports/Muhammad_Basith_software_developer.pdf",
+        "uploaded_at": "2026-06-25T07:16:34.234Z"
+    }
 }
 ]
