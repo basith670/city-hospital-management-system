@@ -93,4 +93,16 @@ path(
     name="update_appointment_status",
 ),
 
+path(
+    "appointment/<int:booking_id>/<str:status>/",
+    views.update_appointment_status,
+    name="update_appointment_status",
+),
+
+path(
+    "report/<int:report_id>/",
+    views.view_report,
+    name="view_report",
+),
+
 ]

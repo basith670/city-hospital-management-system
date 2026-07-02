@@ -40,12 +40,13 @@
 
                 <td>
 
-                    <a href="{{ report.report_file.url }}"
-                       class="btn btn-primary btn-sm">
+                    <a href="{% url 'view_report' report.id %}"
+                        class="btn btn-primary btn-sm"
+                        target="_blank">
 
-                        View
+                            View
 
-                    </a>
+                        </a>
 
                 </td>
 
