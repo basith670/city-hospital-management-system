@@ -105,4 +105,22 @@ path(
     name="view_report",
 ),
 
+
+path(
+    "my-reports/",
+    views.my_reports,
+    name="my_reports",
+),
+
+path(
+    "delete-report/<int:report_id>/",
+    views.delete_report,
+    name="delete_report",
+),
+
+path(
+    "doctor-delete-report/<int:report_id>/",
+    views.doctor_delete_report,
+    name="doctor_delete_report",
+),
 ]

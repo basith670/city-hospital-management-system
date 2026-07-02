@@ -1,26 +1,36 @@
 {% extends 'dashboard_base.html' %}
 
 {% block title %}
-<title>Patient Reports</title>
+<title>My Medical Reports</title>
 {% endblock %}
 
 {% block content %}
 
 <div class="container mt-5">
 
-    <h2 class="text-success mb-4">
-        Patient Reports
-    </h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
 
-    <table class="table table-bordered table-striped">
+        <h2 class="text-success">
+            My Medical Reports
+        </h2>
+
+        <a href="{% url 'upload_report' %}" class="btn btn-success">
+            + Upload New Report
+        </a>
+
+    </div>
+
+    <table class="table table-bordered table-hover">
 
         <thead class="table-success">
 
             <tr>
 
-                <th>Patient</th>
+                <th>#</th>
 
-                <th>Report</th>
+                <th>Report Name</th>
+
+                <th>Uploaded On</th>
 
                 <th>View</th>
                 <th>Delete</th>
@@ -31,19 +41,21 @@
 
         <tbody>
 
-            {% for report in reports %}
+        {% for report in reports %}
 
             <tr>
 
-                <td>{{ report.patient.username }}</td>
+                <td>{{ forloop.counter }}</td>
 
                 <td>{{ report.report_name }}</td>
+
+                <td>{{ report.uploaded_at|date:"d M Y H:i" }}</td>
 
                 <td>
 
                     <a href="{% url 'view_report' report.id %}"
-                       class="btn btn-primary btn-sm"
-                       target="_blank">
+                       target="_blank"
+                       class="btn btn-primary btn-sm">
                 
                         View
                 
@@ -53,7 +65,7 @@
                 
                 <td>
                 
-                    <a href="{% url 'doctor_delete_report' report.id %}"
+                    <a href="{% url 'delete_report' report.id %}"
                        class="btn btn-danger btn-sm"
                        onclick="return confirm('Delete this report?');">
                 
@@ -65,19 +77,19 @@
 
             </tr>
 
-            {% empty %}
+        {% empty %}
 
             <tr>
 
-                <td colspan="4">
+                <td colspan="5" class="text-center">
 
-                    No Reports Uploaded
+                    No medical reports uploaded yet.
 
                 </td>
 
             </tr>
 
-            {% endfor %}
+        {% endfor %}
 
         </tbody>
 

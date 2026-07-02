@@ -606,3 +606,63 @@ def view_report(request, report_id):
         filename=os.path.basename(report.report_file.path)
 
     )
+
+# ==========================================
+# PATIENT REPORT HISTORY
+# ==========================================
+
+@login_required(login_url="login")
+def my_reports(request):
+
+    if request.user.role != "patient":
+        return redirect("doctor_dashboard")
+
+    reports = MedicalReport.objects.filter(
+        patient=request.user
+    ).order_by("-uploaded_at")
+
+    return render(
+        request,
+        "my_reports.html",
+        {
+            "reports": reports,
+            "active_page": "my_reports",
+        }
+    )
+
+@login_required(login_url="login")
+def delete_report(request, report_id):
+
+    if request.user.role != "patient":
+        return redirect("doctor_dashboard")
+
+    report = MedicalReport.objects.get(
+        id=report_id,
+        patient=request.user
+    )
+
+    # Delete the PDF file from storage
+    if report.report_file:
+        report.report_file.delete(save=False)
+
+    # Delete database record
+    report.delete()
+
+    return redirect("my_reports")
+
+@login_required(login_url="login")
+def doctor_delete_report(request, report_id):
+
+    if request.user.role != "doctor":
+        return redirect("patient_dashboard")
+
+    report = MedicalReport.objects.get(id=report_id)
+
+    # Delete PDF from storage
+    if report.report_file:
+        report.report_file.delete(save=False)
+
+    # Delete database record
+    report.delete()
+
+    return redirect("view_reports")

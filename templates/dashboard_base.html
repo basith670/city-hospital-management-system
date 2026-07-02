@@ -63,6 +63,15 @@ href="{% static 'css/dashboard.css' %}">
                     <i class="fa-solid fa-file-arrow-up"></i>
                     Upload Report
                 </a>
+
+                <a href="{% url 'my_reports' %}"
+                    class="{% if active_page == 'my_reports' %}active{% endif %}">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                        My Reports
+
+                    </a>
             </li>
 
             {% endif %}
