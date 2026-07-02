@@ -23,6 +23,12 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+from django.shortcuts import get_object_or_404
+
+from django.http import FileResponse, Http404
+
+
+
 
 # ==========================================
 # AUTHENTICATION
@@ -564,17 +570,39 @@ def view_report(request, report_id):
     )
 
 @login_required(login_url="login")
+
 def view_report(request, report_id):
 
-    print("========== VIEW REPORT CALLED ==========")
+    print("=" * 60)
+
+    print("VIEW REPORT CALLED")
+
     print("REPORT ID:", report_id)
 
-    report = MedicalReport.objects.get(id=report_id)
+    report = get_object_or_404(MedicalReport, id=report_id)
 
-    if not os.path.exists(report.report_file.path):
-        raise Http404("Report not found.")
+    print("DB FILE:", report.report_file.name)
+
+    print("ABS PATH:", report.report_file.path)
+
+    exists = os.path.exists(report.report_file.path)
+
+    print("FILE EXISTS:", exists)
+
+    if not exists:
+
+        print("RETURNING 404")
+
+        raise Http404("File not found")
+
+    print("OPENING FILE...")
 
     return FileResponse(
+
         open(report.report_file.path, "rb"),
-        content_type="application/pdf"
+
+        content_type="application/pdf",
+
+        filename=os.path.basename(report.report_file.path)
+
     )
