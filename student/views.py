@@ -562,3 +562,19 @@ def view_report(request, report_id):
         open(report.report_file.path, "rb"),
         content_type="application/pdf"
     )
+
+@login_required(login_url="login")
+def view_report(request, report_id):
+
+    print("========== VIEW REPORT CALLED ==========")
+    print("REPORT ID:", report_id)
+
+    report = MedicalReport.objects.get(id=report_id)
+
+    if not os.path.exists(report.report_file.path):
+        raise Http404("Report not found.")
+
+    return FileResponse(
+        open(report.report_file.path, "rb"),
+        content_type="application/pdf"
+    )
