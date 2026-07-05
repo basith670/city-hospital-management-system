@@ -6,70 +6,135 @@ Login
 
 {% block content %}
 
-<div class="container">
+<div class="auth-card">
 
-    <div class="row justify-content-center mt-5">
+    <div class="logo">
 
-        <div class="col-md-5">
+        <i class="fas fa-hospital"></i>
 
-            <div class="card shadow-lg border-0">
+    </div>
 
-                <div class="card-body p-5">
+    <h2 class="text-center auth-title">
 
-                    <h2 class="text-center text-success mb-4">
-                        City Hospital Login
-                    </h2>
+        City Hospital
 
-                    {% if error %}
-                    <div class="alert alert-danger">
-                        {{ error }}
-                    </div>
-                    {% endif %}
+    </h2>
 
-                    <form method="POST">
+    <p class="text-center text-muted mb-4">
 
-                        {% csrf_token %}
+        Welcome back! Please login to continue.
 
-                        <input
-                            type="text"
-                            name="username"
-                            class="form-control mb-3"
-                            placeholder="Username">
+    </p>
 
-                        <input
-                            type="password"
-                            name="password"
-                            class="form-control mb-4"
-                            placeholder="Password">
+    {% if error %}
 
-                        <button
-                            class="btn btn-success w-100">
+    <div class="alert alert-danger">
 
-                            Login
+        {{ error }}
 
-                        </button>
+    </div>
 
-                    </form>
+    {% endif %}
 
-                    <hr>
+    <form method="POST">
 
-                    <div class="text-center">
+        {% csrf_token %}
 
-                        <a href="{% url 'doctor_register' %}">
-                            Register as Doctor
-                        </a>
+        <div class="mb-3">
 
-                        <br><br>
+            <label class="form-label">
 
-                        <a href="{% url 'patient_register' %}">
-                            Register as Patient
-                        </a>
+                Username
 
-                    </div>
+            </label>
 
-                </div>
+            <div class="input-group">
+
+                <span class="input-group-text">
+
+                    <i class="fas fa-user"></i>
+
+                </span>
+
+                <input
+                    type="text"
+                    name="username"
+                    class="form-control"
+                    placeholder="Enter Username"
+                    required>
 
             </div>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label class="form-label">
+
+                Password
+
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text">
+
+                    <i class="fas fa-lock"></i>
+
+                </span>
+
+                <input
+                    type="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="Enter Password"
+                    required>
+
+            </div>
+
+        </div>
+
+        <button
+            type="submit"
+            class="btn btn-success btn-auth w-100">
+
+            <i class="fas fa-right-to-bracket"></i>
+
+            Login
+
+        </button>
+
+    </form>
+
+    <hr class="my-4">
+
+    <div class="text-center auth-links">
+
+        <p class="mb-2">
+
+            Don't have an account?
+
+        </p>
+
+        <div class="d-grid gap-2">
+
+            <a href="{% url 'patient_register' %}"
+               class="btn btn-outline-primary">
+
+                <i class="fas fa-user-plus"></i>
+
+                Register as Patient
+
+            </a>
+
+            <a href="{% url 'doctor_register' %}"
+               class="btn btn-outline-success">
+
+                <i class="fas fa-user-doctor"></i>
+
+                Register as Doctor
+
+            </a>
 
         </div>
 

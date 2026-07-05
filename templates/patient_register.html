@@ -1,59 +1,129 @@
 {% extends 'auth_base.html' %}
 
-{% load crispy_forms_tags %}
-
 {% block title %}
 Patient Registration
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
+<div class="auth-card">
 
-    <div class="row justify-content-center mt-5">
+    <div class="logo">
+        <i class="fas fa-user"></i>
+    </div>
 
-        <div class="col-md-6">
+    <h2 class="text-center auth-title">
+        Patient Registration
+    </h2>
 
-            <div class="card shadow">
+    <p class="text-center text-muted mb-4">
+        Create your City Hospital account
+    </p>
 
-                <div class="card-body">
+    <form method="POST">
 
-                    <h2 class="text-center text-success mb-4">
+        {% csrf_token %}
 
-                        Patient Registration
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+            <small class="text-danger">{{ form.username.errors.0 }}</small>
+            {% endif %}
+        </div>
 
-                    </h2>
+        <div class="row">
 
-                    <form method="POST">
+            <div class="col-md-6 mb-3">
 
-                        {% csrf_token %}
+                <label class="form-label">
 
-                        {{ form|crispy }}
+                    First Name
 
-                        <button
-                            class="btn btn-success w-100 mt-3">
+                </label>
 
-                            Register
+                {{ form.first_name }}
 
-                        </button>
+            </div>
 
-                    </form>
+            <div class="col-md-6 mb-3">
 
-                    <div class="text-center mt-3">
+                <label class="form-label">
 
-                        <a href="{% url 'login' %}">
+                    Last Name
 
-                            Already have an account?
+                </label>
 
-                        </a>
-
-                    </div>
-
-                </div>
+                {{ form.last_name }}
 
             </div>
 
         </div>
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Email
+
+            </label>
+
+            {{ form.email }}
+
+        </div>
+
+        <div class="mb-3">
+
+            <label class="form-label">
+
+                Password
+
+            </label>
+
+            {{ form.password1 }}
+
+        </div>
+
+        <div class="mb-4">
+
+            <label class="form-label">
+
+                Confirm Password
+
+            </label>
+
+            {{ form.password2 }}
+
+        </div>
+
+        <button class="btn btn-success btn-auth w-100">
+
+            <i class="fas fa-user-plus"></i>
+
+            Create Patient Account
+
+        </button>
+
+    </form>
+
+    <hr>
+
+    <div class="text-center">
+
+        <span class="text-muted">
+
+            Already have an account?
+
+        </span>
+
+        <br><br>
+
+        <a href="{% url 'login' %}"
+           class="btn btn-outline-success">
+
+            Login
+
+        </a>
 
     </div>
 
